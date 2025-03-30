@@ -41,7 +41,7 @@ DB_ROOT_PASSWORD=rootpassword123
 EOT
 
 # Clone application (replace with your actual repo)
-git clone https://github.com/your-repo/multi-tier-app.git docker-app
+git clone https://github.com/sarojku15/multi-tier-app.git docker-app
 cd docker-app
 
 # Start the application
