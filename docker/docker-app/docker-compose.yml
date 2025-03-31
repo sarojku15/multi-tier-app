@@ -49,8 +49,8 @@ services:
       - "8081:80"
     environment:
       - PMA_HOST=db
-      - PMA_USER=${DB_USER}
-      - PMA_PASSWORD=${DB_PASSWORD}
+      - PMA_USER=todo_user
+      - PMA_PASSWORD=securepassword123
     depends_on:
       - db
     restart: unless-stopped
