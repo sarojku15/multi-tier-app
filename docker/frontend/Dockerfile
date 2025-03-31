@@ -1,15 +1,15 @@
-FROM nginx:alpine
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+FROM nginx:latest
 COPY . /usr/share/nginx/html
 EXPOSE 80
-EOT
 
 # Create a minimal nginx.conf
-cat <<EOT > frontend/nginx.conf
+RUN cat <<EOT > /etc/nginx/conf.d/default.conf
 server {
     listen 80;
+    server_name localhost;
     location / {
         root /usr/share/nginx/html;
         index index.html;
     }
 }
+EOT
